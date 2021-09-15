@@ -40,4 +40,46 @@ function generatePassword() {
   confirmCharacter = confirm("Will this contain special characters?");
   confirmUppercase = confirm("Will this contain Uppercase letters?");
   confirmLowercase = confirm("Will this contain Lowercase letters?");
+  };
+  // No criteria selected
+  if (!confirmNumber && !confirmCharacter && !confirmUppercase && !confirmLowercase) {
+    choices = alert("You must choose at least one criteria!");
+  } 
+  // All four criteria selected
+    else if (confirmNumber && confirmCharacter && confirmUppercase && confirmLowercase) {
+      choices = number.concat(character, alphabet, alphabetUpper);
+  } 
+  // Three criteria selected
+    else if (confirmNumber && confirmCharacter && confirmUppercase) {
+      choices = number.concat(character, alphabetUpper);
+  } else if (confirmNumber && confirmCharacter && confirmLowercase) {
+      choices = number.concat(character, alphabet);
+  } else if (confirmCharacter && confirmUppercase && confirmLowercase) {
+      choices = character.concat(alphabet, alphabetUpper);
+  } else if (confirmNumber && confirmUppercase && confirmLowercase) {
+      choices = number.concat(alphabet, alphabetUpper);
+  } 
+  // Two criteria selected
+    else if (confirmNumber && confirmCharacter) {
+      choices = number.concat(character);
+  } else if (confirmCharacter && confirmUppercase) {
+      choices = character.concat(alphabetUpper);
+  } else if (confirmCharacter && confirmLowercase) {
+      choices = character.concat(alphabet);
+  } else if (confirmNumber && confirmUppercase) {
+      choices = number.concat(alphabetUpper);
+  } else if (confirmNumber && confirmLowercase) {
+      choices = number.concat(alphabet);
+  } else if (confirmUppercase && confirmLowercase) {
+      choices = alphabet.concat(alphabetUpper);
+  }
+  // One criteria selected
+    else if (confirmNumber) {
+      choices = number;
+  } else if (confirmCharacter) {
+      choices = character;
+  } else if (confirmLowercase) {
+      choices = alphabet;
+  } else if (confirmUppercase) {
+      choices = space.concat(alphabetUpper);
   }
