@@ -20,7 +20,13 @@ var toUpper = function (up) {
 };
 alphabet2 = alphabet.map(toUpper);
 
+// Event Listener
 var generateBtn = document.querySelector("#generate");
+
+generateBtn.addEventListener("click", function() {
+  password = generatePassword();
+  document.getElementById("password").placeholder = password;
+});
 
 // Write password to the #password input
 function writePassword() {
