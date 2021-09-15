@@ -1,4 +1,3 @@
-// Begin Code
 // Input Variables
 var criteria;
 var confirmNumber;
