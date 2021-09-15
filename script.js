@@ -42,14 +42,17 @@ function generatePassword() {
   confirmUppercase = confirm("Will this contain Uppercase letters?");
   confirmLowercase = confirm("Will this contain Lowercase letters?");
   };
+
   // No criteria selected
   if (!confirmNumber && !confirmCharacter && !confirmUppercase && !confirmLowercase) {
     choices = alert("You must choose at least one criteria!");
   } 
+  
   // All four criteria selected
     else if (confirmNumber && confirmCharacter && confirmUppercase && confirmLowercase) {
       choices = number.concat(character, alphabet, alphabetUpper);
   } 
+
   // Three criteria selected
     else if (confirmNumber && confirmCharacter && confirmUppercase) {
       choices = number.concat(character, alphabetUpper);
@@ -60,6 +63,7 @@ function generatePassword() {
   } else if (confirmNumber && confirmUppercase && confirmLowercase) {
       choices = number.concat(alphabet, alphabetUpper);
   } 
+
   // Two criteria selected
     else if (confirmNumber && confirmCharacter) {
       choices = number.concat(character);
@@ -74,6 +78,7 @@ function generatePassword() {
   } else if (confirmUppercase && confirmLowercase) {
       choices = alphabet.concat(alphabetUpper);
   }
+
   // One criteria selected
     else if (confirmNumber) {
       choices = number;
@@ -85,6 +90,7 @@ function generatePassword() {
       choices = space.concat(alphabetUpper);
   };
 
+  // For loop
   var password = [];
 
   for (var i = 0; i < criteria; i++) {
@@ -96,6 +102,9 @@ function generatePassword() {
   UserInput(pw);
   return pw;
 }
-function UserInput(pw) {
+
+  // Password Display
+  function UserInput(pw) {
   document.getElementById("password").textContent = pw;
+
 }
