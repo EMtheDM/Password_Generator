@@ -82,4 +82,19 @@ function generatePassword() {
       choices = alphabet;
   } else if (confirmUppercase) {
       choices = space.concat(alphabetUpper);
+  };
+
+  var password = [];
+
+  for (var i = 0; i < criteria; i++) {
+    var selectChoices = choices[Math.floor(Math.random() * choices.length)];
+    password.push(selectChoices);
   }
+
+  var pw = password.join("");
+  UserInput(pw);
+  return pw;
+}
+function UserInput(pw) {
+  document.getElementById("password").textContent = pw;
+}
