@@ -1,41 +1,43 @@
-// Assignment Code
-var enter;
+// Begin Code
+// Input Variables
+var criteria;
 var confirmNumber;
 var confirmCharacter;
 var confrimUppercase;
 var confirmLowercase;
-
+// Password Value Arrays
 // Special characters
-specialCharacter = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "\:", "\;", "'", "<", ",", ">", ".", "?", "/", "`", "~", "{", "[", "}", "]", "|"];
+character = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "\:", "\;", "'", "<", ",", ">", ".", "?", "/", "`", "~", "{", "[", "}", "]", "|"];
 // Numeric characters
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // Alphabetical characters
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // Uppercase conversion
 space = [];
 // Converts letters to uppercase
 var choices;
-var toUpper = function (up) {
-  return up.toUpperCase();
+var toUpper = function (upperCase) {
+    return upperCase.toUpperCase();
 };
-alphabet2 = alphabet.map(toUpper);
+alphabetUpper = alphabet.map(toUpper);
 
-// Event Listener
 var generateBtn = document.querySelector("#generate");
 
-generateBtn.addEventListener("click", function() {
-  password = generatePassword();
-  document.getElementById("password").placeholder = password;
+generateBtn.addEventListener("click", function () {
+    pw = generatePassword();
+    document.getElementById("password").placeholder = pw;
 });
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// Function to generate password
+function generatePassword() {
+  criteria = parseInt(prompt("How many characters would you like your password to be? Please choose between 8 and 128."));
+  if (!criteria) {
+    alert("A value is needed!");
+  } else if (criteria < 8 || criteria > 128) {
+    criteria = parseInt(prompt("You must choose between 8 and 128!"));
+  } else {  
+  confirmNumber = confirm("Will this contain numbers?");
+  confirmCharacter = confirm("Will this contain special characters?");
+  confirmUppercase = confirm("Will this contain Uppercase letters?");
+  confirmLowercase = confirm("Will this contain Lowercase letters?");
+  }
