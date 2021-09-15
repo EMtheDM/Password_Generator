@@ -6,7 +6,7 @@ var confrimUppercase;
 var confirmLowercase;
 // Password Value Arrays
 // Special characters
-character = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "\:", "\;", "'", "<", ",", ">", ".", "?", "/", "`", "~", "{", "[", "}", "]", "|"];
+character = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", ":", ";", "'", "<", ",", ">", ".", "?", "/", "`", "~", "{", "[", "}", "]", "|"];
 // Numeric characters
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 // Alphabetical characters
