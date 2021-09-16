@@ -5,9 +5,8 @@ Created a password generator that would randomly assign a password based on a se
 - Special Character
 - Uppercase Letter
 - Lowercase Letter
-## Installation
-Navigate to https://emthedm.github.io/Password_Generator/ to use Password Generator.
 ## Usage
+Navigate to https://emthedm.github.io/Password_Generator/ to use Password Generator.
 
 ![Alt Text](Assets/2021-09-15 20.29.21.gif)
 
