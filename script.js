@@ -106,5 +106,4 @@ function generatePassword() {
   // Password Display
   function UserInput(pw) {
   document.getElementById("password").textContent = pw;
-
 }
