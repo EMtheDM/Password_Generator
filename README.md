@@ -8,7 +8,7 @@ Created a password generator that would randomly assign a password based on a se
 ## Usage
 Navigate to https://emthedm.github.io/Password_Generator/ to use Password Generator.
 
-![Alt Text](Assets/2021-09-15 20.29.21.gif)
+![Alt Text](Assets/Password Generator.gif)
 
 ## License
 MIT License
